@@ -15,14 +15,16 @@
         "myclabs/php-enum": "1.7.*"
     },
     "require-dev": {
+        "darkaonline/l5-swagger": "6.*",
         "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.4",
+        "koriym/printo": "~1.0",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
+        "nunomaduro/larastan": "^0.6.9",
         "phpunit/phpunit": "^8.0",
         "squizlabs/php_codesniffer": "3.5.*",
-        "phpstan/phpstan": "0.12.*",
-        "koriym/printo": "~1.0"
+        "timeweb/phpstan-enum": "^2.2"
     },
     "config": {
         "optimize-autoloader": true,
@@ -37,7 +39,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Kit\\": "src/Kit/"
+            "Kit\\": "src/Kit/",
+            "Validation\\": "src/Validation/"
         },
         "classmap": [
             "database/seeds",

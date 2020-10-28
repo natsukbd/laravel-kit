@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::namespace('Api\\Kit')->group(
+    static function () {
+        Route::get('/varieties', 'VarietyController@listAll');
+        Route::post('/varieties', 'VarietyController@register');
+        Route::get('/starterkits', 'StarterKitController@listAll');
+        Route::post('/starterkits', 'StarterKitController@register');
+    }
+);
+
